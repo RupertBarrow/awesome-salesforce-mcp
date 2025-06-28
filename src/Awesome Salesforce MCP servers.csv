@@ -1,0 +1,41 @@
+Features;codefriar/sf-mcp;smn2gnt/MCP-Salesforce;tsmztech/mcp-server-salesforce;kablewy/salesforce-mcp-server;salesforcecli/mcp;jaworjar95/salesforce-mcp-server;rapidocloud/mcp-force;BrinsilElias/commercecloud-mcp-server
+Written in;Typescript;Python;TypeScript;TypeScript;TypeScript;TypeScript;TypeScript;TypeScript
+Library Used;sf CLI;simple_salesforce;jsforce;jsforce;jsforce;jsforce;rapidocloud/mcp-tools;none
+How tools are written;automatically generated from the Salesforce sf CLI commands;hard-coded;hard-coded;hard-coded;hard-coded;hard-coded;automatically generated from Postman API collections;hard-coded
+MCP Tools: REST API;"all ‘sf data’ CLI commands
+‘sf api request rest’ CLI command";"run_soql_query
+run_sosl_search
+CRUD: get_record, create_record, update_record, delete_record
+apex_execute
+restful: any operation";DML/CRUD: get, create, update, delete;"search
+query";data query;"records (CRUD)
+soql, sosl";all entry points of REST API;-
+MCP Tools: Tooling API;all sf CLI commands : analytics, apex, code-analyzer, codescan, flow, lightning, org, package1, package, project, scanner, static-resource, visualforce;tooling_execute;"read and write apex
+manage debug logs
+executeAnonymous
+describe
+search
+manage fields and their permissions";tooling_query;"metadata deploy and retrieve
+list orgs
+test apex and agents
+assign permset";"apex execute
+get logs
+run tests
+metadata (deploy, retrieve)";all entry points of Tooling API;-
+MCP Tools: Metadata API;all sf CLI commands : cmdt, schema, sobject;"describe sObject
+get_object_fields, labels, types";describe;"sobject describe
+metadata.read";-;metadata (list, describe);all entry points of Metadata API;-
+MCP Tools: Bulk API;all ‘sf data * bulk’ CLI commands;-;-;-;-;-;all entry points of Bulk v2 API;-
+MCP Tools: GraphQL API;sf api request graphql’ CLI command;-;-;-;-;-;all entry points of GraphQL API;-
+MCP Tools: Other;"Agentforce :
+- all ‘sf agent’ CLI commands";-;-;-;-;-;-;"Commerce Cloud API (OCAPI) :
+all shop API entry points
+all data API tools entry points"
+MCP Prompts;none;none;none;none;none;none;code dependency analysis (experimental);none
+MCP Resources;none;none;none;none;none;none;code dependency viewer (experimental);none
+MCP Server Mode;"stdio
+sse";stdio;stdio;stdio;stdio;stdio;"stdio
+sse";stdio
+Latest Version;v1.3.2;v0.1.8;v0.0.3;none;0.10.1;1.0.4;1.0.0-alpha.2;none
+Last Updated;May 28, 2025;May 23, 2025;June 14, 2025;June 7, 2025;June 28, 2025;June 21, 2025;June 27, 2025;June 24, 2025
+Authentication;by access_token;by access_token;OAuth 2.0 Client Credentials Flow (SALESFORCE_CLIENT_ID and SALESFORCE_CLIENT_SECRET);SF_USERNAME, SF_PASSWORD, and SF_SECURITY_TOKEN;sf cli auth methods, feature to allowlist a list of orgs;SF_USERNAME, SF_PASSWORD, and SF_SECURITY_TOKEN, or SF_CLIENT_ID and SF_REFRESH_TOKEN;by access_token;Salesforce CommerceCloud OCAPI configuration (instanceUrl, OAuthUrl, siteId, clientId, clientSecret, userId, securityToken)
